@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H-H Book Center & Photostate | Premium Printing, Photocopy & Student Services</title>
+<meta name="description" content="H-H Book Center & Photostate — professional printing, photocopy, binding, typing, design and student services in Mathab Chowk, Mehray Wala. Fast, reliable, affordable. Call or WhatsApp +92 335 4656732.">
+<meta name="keywords" content="H-H Book Center, Photostate, Printing, Photocopy, Thesis Binding, Spiral Binding, Typing Services, CV Design, Mathab Chowk, Mehray Wala">
+<meta name="author" content="H-H Book Center & Photostate">
+<meta name="theme-color" content="#0B2340">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="H-H Book Center & Photostate | Professional Printing & Student Services">
+<meta property="og:description" content="Fast, reliable and affordable printing, photocopy, stationery and digital services under one roof.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:locale" content="en_PK">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "H-H Book Center & Photostate",
+  "image": "assets/logo.png",
+  "telephone": ["+923354656732", "+923326162728"],
+  "email": "shakirmhussain12@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mathab Chowk, Mehray Wala",
+    "addressCountry": "PK"
+  },
+  "openingHours": "Mo-Su 08:00-21:00",
+  "priceRange": "$"
+}
+</script>
+
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --royal:#153762;
+  --royal-deep:#0A1F3D;
+  --royal-soft:#274B7D;
+  --gold:#C7992F;
+  --gold-light:#E4C468;
+  --gold-pale:#F4E9C9;
+  --paper:#FFFFFF;
+  --soft-gray:#F5F6F9;
+  --line:#E7E9F0;
+  --ink:#152036;
+  --muted:#5C6478;
+  --shadow-sm: 0 2px 10px rgba(10,31,61,0.06);
+  --shadow-md: 0 12px 32px rgba(10,31,61,0.10);
+  --shadow-lg: 0 24px 64px rgba(10,31,61,0.16);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --ease: cubic-bezier(.22,.9,.32,1);
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block;}
+a{text-decoration:none; color:inherit;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+h1,h2,h3,h4{font-family:'Fraunces',serif; font-weight:600; line-height:1.15; color:var(--royal-deep);}
+.container{width:100%; max-width:1200px; margin:0 auto; padding:0 24px;}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Inter',sans-serif; font-weight:700; font-size:12.5px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--gold);
+}
+.eyebrow::before{content:""; width:22px; height:1.5px; background:var(--gold);}
+.section{padding:110px 0;}
+.section-head{max-width:640px; margin-bottom:56px;}
+.section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+.section-title{font-size:clamp(28px,4vw,44px); margin-top:14px;}
+.section-sub{margin-top:16px; color:var(--muted); font-size:16.5px; line-height:1.7;}
+@media(max-width:768px){ .section{padding:72px 0;} }
+
+::selection{background:var(--gold-pale); color:var(--royal-deep);}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+/* ============ LOADER ============ */
+#loader{
+  position:fixed; inset:0; z-index:9999; background:var(--royal-deep);
+  display:flex; align-items:center; justify-content:center; flex-direction:column; gap:18px;
+  transition:opacity .6s var(--ease), visibility .6s var(--ease);
+}
+#loader.hide{opacity:0; visibility:hidden; pointer-events:none;}
+.loader-mark{
+  width:64px; height:64px; border-radius:50%;
+  border:2px solid rgba(199,153,47,.25); border-top-color:var(--gold);
+  animation:spin 1s linear infinite;
+}
+.loader-text{font-family:'Fraunces',serif; color:var(--gold-pale); font-size:14px; letter-spacing:.18em; text-transform:uppercase;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ============ SCROLL PROGRESS ============ */
+#progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--gold),var(--gold-light)); z-index:10000;}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed; top:0; left:0; right:0; z-index:900;
+  background:rgba(255,255,255,.7); backdrop-filter:blur(16px) saturate(150%); -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border-bottom:1px solid rgba(21,32,54,.06);
+  transition:background .4s var(--ease), box-shadow .4s var(--ease), padding .3s var(--ease);
+}
+header.scrolled{box-shadow:var(--shadow-sm); background:rgba(255,255,255,.92);}
+.nav-wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand img{width:48px; height:48px; border-radius:50%; box-shadow:var(--shadow-sm);}
+.brand-text{font-family:'Fraunces',serif; line-height:1.15;}
+.brand-text .b1{font-size:16px; font-weight:700; color:var(--royal-deep); white-space:nowrap;}
+.brand-text .b2{font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-family:'Inter',sans-serif; font-weight:600;}
+nav.main-nav{display:flex; align-items:center; gap:34px;}
+nav.main-nav a{
+  font-size:14.5px; font-weight:500; color:var(--ink); position:relative; padding:4px 0;
+}
+nav.main-nav a::after{content:""; position:absolute; left:0; bottom:-2px; width:0; height:1.5px; background:var(--gold); transition:width .3s var(--ease);}
+nav.main-nav a:hover::after{width:100%;}
+.header-actions{display:flex; align-items:center; gap:12px;}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:12px 24px; border-radius:100px; font-size:14px; font-weight:600;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), background .3s var(--ease);
+  white-space:nowrap;
+}
+.btn svg{width:16px; height:16px; flex-shrink:0;}
+.btn-gold{background:linear-gradient(135deg,var(--gold-light),var(--gold)); color:var(--royal-deep); box-shadow:0 10px 24px rgba(199,153,47,.35);}
+.btn-gold:hover{transform:translateY(-3px); box-shadow:0 16px 32px rgba(199,153,47,.45);}
+.btn-outline{border:1.5px solid var(--royal); color:var(--royal); background:transparent;}
+.btn-outline:hover{background:var(--royal); color:#fff; transform:translateY(-3px);}
+.btn-whatsapp{background:#1FA855; color:#fff; box-shadow:0 10px 24px rgba(31,168,85,.3);}
+.btn-whatsapp:hover{transform:translateY(-3px); box-shadow:0 16px 30px rgba(31,168,85,.4);}
+.btn-ghost-royal{background:var(--royal); color:#fff;}
+.btn-ghost-royal:hover{background:var(--royal-deep); transform:translateY(-3px);}
+.btn-lg{padding:16px 32px; font-size:15px;}
+
+.header-actions .call-only{display:flex;}
+.menu-toggle{display:none; flex-direction:column; gap:5px; width:32px; height:24px; justify-content:center; z-index:901;}
+.menu-toggle span{width:100%; height:2px; background:var(--royal-deep); border-radius:2px; transition:.3s var(--ease);}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media(max-width:980px){
+  nav.main-nav{
+    position:fixed; top:0; right:0; height:100vh; width:min(320px,80vw);
+    background:var(--royal-deep); flex-direction:column; align-items:flex-start; justify-content:center;
+    gap:26px; padding:40px; transform:translateX(100%); transition:transform .45s var(--ease); z-index:895;
+  }
+  nav.main-nav.open{transform:translateX(0);}
+  nav.main-nav a{color:#fff; font-size:18px; font-family:'Fraunces',serif;}
+  nav.main-nav a::after{background:var(--gold);}
+  .menu-toggle{display:flex;}
+  .header-actions .btn-outline{display:none;}
+}
+@media(max-width:560px){
+  .brand-text .b1{font-size:14px;}
+  .header-actions .btn span.label{display:none;}
+  .header-actions .btn{padding:12px; border-radius:50%; width:44px; height:44px;}
+  .header-actions{gap:10px;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative; min-height:100vh; display:flex; align-items:center;
+  padding-top:110px; padding-bottom:60px; overflow:hidden;
+  background:radial-gradient(120% 100% at 85% -10%, #1B3E68 0%, var(--royal-deep) 55%, #081832 100%);
+}
+.hero-grain{position:absolute; inset:0; opacity:.05; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.hero .container{position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;}
+.hero-eyebrow{color:var(--gold-light); }
+.hero-eyebrow::before{background:var(--gold-light);}
+.hero h1{color:#fff; font-size:clamp(34px,5vw,58px); margin-top:18px; letter-spacing:-.01em;}
+.hero h1 em{font-style:italic; color:var(--gold-light); font-weight:500;}
+.hero p.lead{color:rgba(255,255,255,.72); font-size:17.5px; line-height:1.75; max-width:520px; margin-top:22px;}
+.hero-cta{display:flex; gap:16px; margin-top:36px; flex-wrap:wrap;}
+.hero-stats{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:64px; max-width:640px;}
+.stat{border-left:1px solid rgba(255,255,255,.16); padding-left:16px;}
+.stat .num{font-family:'Fraunces',serif; font-size:clamp(24px,3vw,34px); color:#fff; font-weight:700; display:flex; align-items:baseline; gap:2px;}
+.stat .num .plus{color:var(--gold-light); font-size:.6em;}
+.stat .lbl{font-size:12px; color:rgba(255,255,255,.55); margin-top:6px; letter-spacing:.04em; text-transform:uppercase;}
+
+/* hero visual: layered document composition */
+.hero-visual{position:relative; height:520px; display:flex; align-items:center; justify-content:center;}
+.doc-stack{position:relative; width:340px; height:420px;}
+.doc{
+  position:absolute; background:#fff; border-radius:14px; box-shadow:0 30px 60px rgba(0,0,0,.35);
+  padding:22px; border:1px solid rgba(255,255,255,.5);
+}
+.doc-a{width:280px; height:360px; top:40px; left:0; transform:rotate(-9deg); opacity:.85;}
+.doc-b{width:280px; height:360px; top:22px; left:30px; transform:rotate(4deg); opacity:.95;}
+.doc-c{width:290px; height:380px; top:0; left:14px; z-index:3;}
+.doc-lines span{display:block; height:7px; border-radius:4px; background:var(--soft-gray); margin-bottom:11px;}
+.doc-lines span:nth-child(1){width:55%; background:var(--gold-pale);}
+.doc-lines span:nth-child(2){width:92%;}
+.doc-lines span:nth-child(3){width:80%;}
+.doc-lines span:nth-child(4){width:88%;}
+.doc-lines span:nth-child(5){width:60%;}
+.scanline{position:absolute; left:8px; right:8px; height:3px; border-radius:3px; background:linear-gradient(90deg,transparent,var(--gold),transparent); box-shadow:0 0 14px var(--gold); animation:scan 2.6s ease-in-out infinite;}
+@keyframes scan{0%{top:16px; opacity:0;}10%{opacity:1;}50%{top:340px; opacity:1;}90%{opacity:1;}100%{top:16px; opacity:0;}}
+.seal-badge{
+  position:absolute; bottom:-18px; right:-24px; z-index:4; width:118px; height:118px; border-radius:50%;
+  background:conic-gradient(from 0deg, var(--gold), var(--gold-light), var(--gold));
+  display:flex; align-items:center; justify-content:center; box-shadow:0 16px 40px rgba(199,153,47,.5);
+  animation:float 4.5s ease-in-out infinite;
+}
+.seal-badge .inner{width:96px; height:96px; border-radius:50%; background:var(--royal-deep); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border:1.5px dashed rgba(255,255,255,.35);}
+.seal-badge .inner strong{font-family:'Fraunces',serif; color:#fff; font-size:11px; letter-spacing:.08em; line-height:1.3;}
+.seal-badge .inner span{color:var(--gold-light); font-size:8.5px; letter-spacing:.15em; margin-top:4px;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+@media(max-width:980px){
+  .hero .container{grid-template-columns:1fr; text-align:left;}
+  .hero-visual{height:380px; margin-top:20px;}
+  .hero-stats{grid-template-columns:repeat(2,1fr);}
+}
+
+/* torn paper divider */
+.torn{position:relative; height:46px; background:var(--paper);}
+.torn svg{position:absolute; top:-1px; width:100%; height:48px;}
+
+/* ============ WHY / SERVICES / SHARED CARD SYSTEM ============ */
+.grid{display:grid; gap:24px;}
+.cols-3{grid-template-columns:repeat(3,1fr);}
+.cols-4{grid-template-columns:repeat(4,1fr);}
+@media(max-width:980px){.cols-3,.cols-4{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.cols-3,.cols-4{grid-template-columns:1fr;}}
+
+/* Service catalog cards */
+.services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+@media(max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.services-grid{grid-template-columns:1fr;}}
+
+.catalog-card{
+  position:relative; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md);
+  padding:30px 28px 26px; box-shadow:var(--shadow-sm); transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+  overflow:hidden;
+}
+.catalog-card::before{
+  content:""; position:absolute; left:0; top:26px; bottom:26px; width:3px; background:var(--gold-pale); border-radius:0 4px 4px 0; transition:background .3s;
+}
+.catalog-card:hover{transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:transparent;}
+.catalog-card:hover::before{background:var(--gold);}
+.catalog-card .punch{position:absolute; top:24px; right:24px; width:26px; height:26px; border-radius:50%; background:var(--soft-gray); border:1px dashed var(--line);}
+.catalog-icon{
+  width:52px; height:52px; border-radius:14px; background:linear-gradient(135deg,var(--royal),var(--royal-deep));
+  display:flex; align-items:center; justify-content:center; margin-bottom:20px; box-shadow:var(--shadow-sm);
+}
+.catalog-icon svg{width:26px; height:26px; stroke:var(--gold-light);}
+.catalog-card h3{font-size:20px; margin-bottom:6px;}
+.catalog-card .cat-index{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:8px; display:block;}
+.tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+.tag{font-size:12.5px; color:var(--muted); background:var(--soft-gray); border:1px solid var(--line); padding:6px 12px; border-radius:100px;}
+
+.no-color-note{
+  margin-top:36px; text-align:center; font-size:13.5px; color:var(--muted);
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.no-color-note svg{width:16px; height:16px; stroke:var(--gold);}
+
+/* ============ WHY CHOOSE US ============ */
+.why-section{background:var(--soft-gray);}
+.why-card{
+  background:#fff; border-radius:var(--radius-md); padding:30px 26px; text-align:left; border:1px solid var(--line);
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.why-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-md);}
+.why-icon{width:48px; height:48px; border-radius:50%; background:var(--gold-pale); display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+.why-icon svg{width:22px; height:22px; stroke:var(--royal-deep);}
+.why-card h3{font-size:17px; margin-bottom:8px;}
+.why-card p{font-size:14px; color:var(--muted); line-height:1.6;}
+
+/* ============ PROCESS ============ */
+.process{background:var(--royal-deep); color:#fff; position:relative; overflow:hidden;}
+.process::after{content:""; position:absolute; inset:0; background:radial-gradient(70% 60% at 10% 20%, rgba(199,153,47,.14), transparent 60%);}
+.process .container{position:relative; z-index:1;}
+.process .section-sub{color:rgba(255,255,255,.6);}
+.process .eyebrow{color:var(--gold-light);}
+.process .eyebrow::before{background:var(--gold-light);}
+.process h2{color:#fff;}
+.process-track{display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:20px; position:relative;}
+.process-track::before{content:""; position:absolute; top:34px; left:0; right:0; height:1px; background:repeating-linear-gradient(90deg, rgba(255,255,255,.25) 0 8px, transparent 8px 16px); z-index:0;}
+.step{position:relative; z-index:1; padding:0 18px; text-align:left;}
+.step-num{
+  width:68px; height:68px; border-radius:50%; background:var(--royal); border:1.5px solid var(--gold);
+  display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:24px; color:var(--gold-light); margin-bottom:22px;
+}
+.step h3{color:#fff; font-size:18px; margin-bottom:8px;}
+.step p{color:rgba(255,255,255,.6); font-size:14px; line-height:1.6;}
+@media(max-width:900px){
+  .process-track{grid-template-columns:1fr; gap:36px;}
+  .process-track::before{display:none;}
+}
+
+/* ============ GALLERY ============ */
+.gallery-grid{columns:3 260px; column-gap:20px;}
+.gallery-item{
+  break-inside:avoid; margin-bottom:20px; border-radius:var(--radius-md); overflow:hidden; position:relative;
+  box-shadow:var(--shadow-sm); cursor:pointer;
+}
+.gallery-item .ph{
+  width:100%; aspect-ratio:var(--r,4/5); background:linear-gradient(150deg,var(--royal),var(--royal-deep));
+  display:flex; align-items:center; justify-content:center; position:relative;
+}
+.gallery-item .ph svg{width:38px; height:38px; stroke:rgba(255,255,255,.5);}
+.gallery-item .overlay{
+  position:absolute; inset:0; background:linear-gradient(0deg, rgba(10,31,61,.88), rgba(10,31,61,0) 55%);
+  display:flex; align-items:flex-end; padding:18px; opacity:0; transition:opacity .4s var(--ease);
+}
+.gallery-item:hover .overlay{opacity:1;}
+.gallery-item:hover .ph{transform:scale(1.04);}
+.gallery-item .ph{transition:transform .5s var(--ease);}
+.overlay span{color:#fff; font-family:'Fraunces',serif; font-size:15px;}
+@media(max-width:900px){.gallery-grid{columns:2 200px;}}
+@media(max-width:560px){.gallery-grid{columns:1;}}
+
+/* ============ PRICE LIST ============ */
+.price-tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:34px;}
+.price-tab{
+  padding:10px 20px; border-radius:100px; font-size:13.5px; font-weight:600; border:1.5px solid var(--line); color:var(--muted);
+  transition:.3s var(--ease);
+}
+.price-tab.active, .price-tab:hover{background:var(--royal); color:#fff; border-color:var(--royal);}
+.price-panel{display:none;}
+.price-panel.active{display:block; animation:fadein .5s var(--ease);}
+@keyframes fadein{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);}}
+.price-table{width:100%; border-collapse:collapse; background:#fff; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm);}
+.price-table tr{border-bottom:1px solid var(--line);}
+.price-table tr:last-child{border-bottom:none;}
+.price-table td{padding:18px 24px; font-size:14.5px;}
+.price-table td:first-child{color:var(--ink); font-weight:500;}
+.price-table td:last-child{text-align:right; color:var(--royal); font-family:'Fraunces',serif; font-weight:700; font-size:16px; white-space:nowrap;}
+.price-table tr:hover{background:var(--soft-gray);}
+.price-note{margin-top:20px; font-size:13px; color:var(--muted); display:flex; gap:8px; align-items:flex-start;}
+.price-note svg{width:16px; height:16px; stroke:var(--gold); flex-shrink:0; margin-top:2px;}
+
+/* ============ REVIEWS ============ */
+.reviews-section{background:var(--soft-gray);}
+.review-track{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+@media(max-width:900px){.review-track{grid-template-columns:1fr; }}
+.review-card{
+  background:#fff; border-radius:var(--radius-md); padding:30px; box-shadow:var(--shadow-sm); border:1px solid var(--line);
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease); position:relative;
+}
+.review-card:hover{transform:translateY(-6px); box-shadow:var(--shadow-md);}
+.stars{display:flex; gap:3px; margin-bottom:16px; font-size:15px; letter-spacing:3px; color:var(--gold);}
+.stars svg{width:16px; height:16px; fill:var(--gold); stroke:none;}
+.review-card p.quote{font-size:14.5px; color:var(--ink); line-height:1.75; font-style:italic;}
+.reviewer{display:flex; align-items:center; gap:12px; margin-top:22px;}
+.reviewer .av{
+  width:42px; height:42px; border-radius:50%; background:var(--royal); color:var(--gold-light); display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces',serif; font-weight:700; font-size:15px;
+}
+.reviewer .name{font-size:14px; font-weight:600;}
+.reviewer .role{font-size:12px; color:var(--muted);}
+
+/* ============ FAQ ============ */
+.faq-list{max-width:800px; margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+  width:100%; display:flex; align-items:center; justify-content:space-between; padding:24px 4px; text-align:left;
+  font-family:'Fraunces',serif; font-size:17px; color:var(--royal-deep); gap:20px;
+}
+.faq-q .plus{
+  width:30px; height:30px; border-radius:50%; border:1.5px solid var(--gold); flex-shrink:0; position:relative; transition:transform .4s var(--ease), background .3s;
+}
+.faq-q .plus::before, .faq-q .plus::after{content:""; position:absolute; background:var(--gold); top:50%; left:50%; transform:translate(-50%,-50%);}
+.faq-q .plus::before{width:12px; height:1.5px;}
+.faq-q .plus::after{width:1.5px; height:12px; transition:transform .3s var(--ease);}
+.faq-item.open .plus{background:var(--gold);}
+.faq-item.open .plus::before, .faq-item.open .plus::after{background:var(--royal-deep);}
+.faq-item.open .plus::after{transform:translate(-50%,-50%) rotate(90deg) scale(0);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height .45s var(--ease);}
+.faq-a p{padding:0 4px 24px; color:var(--muted); font-size:14.5px; line-height:1.75; max-width:680px;}
+
+/* ============ CONTACT ============ */
+.contact-section{background:var(--royal-deep); color:#fff; position:relative; overflow:hidden;}
+.contact-section::after{content:""; position:absolute; inset:0; background:radial-gradient(60% 50% at 90% 100%, rgba(199,153,47,.14), transparent 60%);}
+.contact-section .container{position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+.contact-section .eyebrow{color:var(--gold-light);} .contact-section .eyebrow::before{background:var(--gold-light);}
+.contact-section h2{color:#fff;}
+.contact-section .section-sub{color:rgba(255,255,255,.6);}
+.info-list{margin-top:30px; display:flex; flex-direction:column; gap:22px;}
+.info-row{display:flex; gap:16px; align-items:flex-start;}
+.info-icon{width:46px; height:46px; border-radius:12px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.info-icon svg{width:20px; height:20px; stroke:var(--gold-light);}
+.info-row .lbl{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:4px;}
+.info-row .val{font-size:15.5px; font-weight:500;}
+.info-row a.val:hover{color:var(--gold-light);}
+.map-wrap{border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.03); min-height:420px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px; text-align:center; padding:40px;}
+.map-wrap svg{width:44px; height:44px; stroke:var(--gold-light);}
+.map-wrap p{color:rgba(255,255,255,.5); font-size:14px; max-width:280px;}
+@media(max-width:900px){.contact-section .container{grid-template-columns:1fr;}}
+
+/* ============ FOOTER ============ */
+footer{background:#081832; color:rgba(255,255,255,.65); padding:70px 0 26px;}
+.footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1.1fr; gap:44px;}
+.footer-brand{display:flex; align-items:center; gap:12px; margin-bottom:16px;}
+.footer-brand img{width:46px; height:46px; border-radius:50%;}
+.footer-brand .b1{font-family:'Fraunces',serif; color:#fff; font-size:16px; font-weight:700;}
+.footer-brand .b2{font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-light);}
+footer p.tag{font-size:13.5px; line-height:1.7; max-width:280px; color:rgba(255,255,255,.5);}
+.footer-col h4{color:#fff; font-size:14px; margin-bottom:18px; letter-spacing:.03em;}
+.footer-col ul{display:flex; flex-direction:column; gap:12px;}
+.footer-col a{font-size:13.5px; color:rgba(255,255,255,.55); transition:color .3s;}
+.footer-col a:hover{color:var(--gold-light);}
+.social-row{display:flex; gap:10px; margin-top:18px;}
+.social-row a{width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,.15); display:flex; align-items:center; justify-content:center; transition:.3s;}
+.social-row a:hover{background:var(--gold); border-color:var(--gold);}
+.social-row svg{width:16px; height:16px; stroke:#fff;}
+.footer-bottom{margin-top:56px; padding-top:26px; border-top:1px solid rgba(255,255,255,.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:12.5px; color:rgba(255,255,255,.4);}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr; row-gap:36px;}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+
+/* ============ FLOATING BUTTONS ============ */
+.floating{position:fixed; right:24px; bottom:24px; z-index:800; display:flex; flex-direction:column; gap:14px; align-items:flex-end;}
+.fab{
+  width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 14px 30px rgba(0,0,0,.22); transition:transform .35s var(--ease);
+  position:relative;
+}
+.fab:hover{transform:translateY(-4px) scale(1.05);}
+.fab-wa{background:#1FA855;}
+.fab-call{background:var(--royal);}
+.fab svg{width:26px; height:26px; stroke:#fff;}
+.fab-wa::before{
+  content:""; position:absolute; inset:-4px; border-radius:50%; border:2px solid #1FA855; opacity:.6;
+  animation:pulse 2.2s ease-out infinite;
+}
+@keyframes pulse{0%{transform:scale(1); opacity:.6;}100%{transform:scale(1.5); opacity:0;}}
+#toTop{
+  width:46px; height:46px; border-radius:50%; background:#fff; border:1px solid var(--line); box-shadow:var(--shadow-sm);
+  display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transform:translateY(10px);
+  transition:.35s var(--ease);
+}
+#toTop.show{opacity:1; visibility:visible; transform:translateY(0);}
+#toTop svg{width:18px; height:18px; stroke:var(--royal);}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+.reveal-stagger.in > *{animation:none;}
+
+/* focus visibility */
+a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark"></div><div class="loader-text">H-H Book Center</div></div>
+<div id="progress"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand">
+      <img src="assets/logo.png" alt="H-H Book Center & Photostate logo">
+      <div class="brand-text">
+        <div class="b1">H-H Book Center</div>
+        <div class="b2">&amp; Photostate</div>
+      </div>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Price List</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+923354656732" class="btn btn-outline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="label">Call Now</span></a>
+      <a href="https://wa.me/923354656732" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.86L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.25 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg><span class="label">WhatsApp</span></a>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grain"></div>
+  <div class="container">
+    <div class="hero-copy">
+      <span class="eyebrow hero-eyebrow">Trusted Since Day One · Mathab Chowk</span>
+      <h1>Professional Printing &amp; <em>Student Services</em> You Can Trust</h1>
+      <p class="lead">Fast, reliable and affordable printing, photocopy, stationery and digital services — all under one roof, built for students, freelancers and businesses alike.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-gold btn-lg">Get Started</a>
+        <a href="https://wa.me/923354656732" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color:#fff; border-color:rgba(255,255,255,.4);">WhatsApp Now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num" data-count="7"><span>0</span><span class="plus">+</span></div><div class="lbl">Years Experience</div></div>
+        <div class="stat"><div class="num" data-count="12000"><span>0</span><span class="plus">+</span></div><div class="lbl">Happy Customers</div></div>
+        <div class="stat"><div class="num" data-count="250000"><span>0</span><span class="plus">+</span></div><div class="lbl">Documents Printed</div></div>
+        <div class="stat"><div class="num" data-count="4300"><span>0</span><span class="plus">+</span></div><div class="lbl">Projects Completed</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="doc-stack">
+        <div class="doc doc-a"></div>
+        <div class="doc doc-b"></div>
+        <div class="doc doc-c">
+          <div class="doc-lines">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="scanline"></div>
+        </div>
+        <div class="seal-badge">
+          <div class="inner"><strong>QUALITY<br>PRINTING</strong><span>H-H CENTER</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="torn"><svg viewBox="0 0 1200 48" preserveAspectRatio="none"><path d="M0,20 C60,45 120,0 180,22 C240,44 300,4 360,24 C420,44 480,2 540,20 C600,38 660,4 720,22 C780,40 840,2 900,20 C960,38 1020,6 1080,22 C1120,32 1160,10 1200,20 L1200,48 L0,48 Z" fill="#F5F6F9"></path></svg></div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about" style="background:var(--soft-gray);">
+  <div class="container">
+    <div class="grid" style="grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+      <div class="reveal">
+        <span class="eyebrow">About Us</span>
+        <h2 class="section-title">A Full-Service Print &amp; Student Hub, Built On Trust</h2>
+        <p class="section-sub" style="max-width:none;">H-H Book Center &amp; Photostate has grown from a neighbourhood print counter into a complete service center for students, job-seekers and businesses across Mehray Wala. From same-day photocopying to professional thesis binding, CV design and government form assistance — every job leaves our counter checked, clean and on time.</p>
+        <div class="grid cols-3" style="margin-top:34px; gap:18px;">
+          <div>
+            <div style="font-family:'Fraunces',serif; font-size:30px; color:var(--royal);">7+</div>
+            <div style="font-size:13px; color:var(--muted); margin-top:4px;">Years serving the community</div>
+          </div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-size:30px; color:var(--royal);">30+</div>
+            <div style="font-size:13px; color:var(--muted); margin-top:4px;">Services under one roof</div>
+          </div>
+          <div>
+            <div style="font-family:'Fraunces',serif; font-size:30px; color:var(--royal);">7AM–9PM</div>
+            <div style="font-size:13px; color:var(--muted); margin-top:4px;">Open every single day</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="background:#fff; border-radius:var(--radius-lg); padding:40px; box-shadow:var(--shadow-md); border:1px solid var(--line);">
+          <h3 style="font-size:20px; margin-bottom:18px;">Our Promise</h3>
+          <ul style="display:flex; flex-direction:column; gap:16px;">
+            <li style="display:flex; gap:12px; align-items:flex-start; font-size:14.5px; color:var(--muted); line-height:1.6;"><span style="width:8px; height:8px; border-radius:50%; background:var(--gold); margin-top:7px; flex-shrink:0;"></span>Every document is quality-checked before it reaches you.</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; font-size:14.5px; color:var(--muted); line-height:1.6;"><span style="width:8px; height:8px; border-radius:50%; background:var(--gold); margin-top:7px; flex-shrink:0;"></span>Transparent pricing — no hidden charges, ever.</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; font-size:14.5px; color:var(--muted); line-height:1.6;"><span style="width:8px; height:8px; border-radius:50%; background:var(--gold); margin-top:7px; flex-shrink:0;"></span>Student-first pricing on notes, assignments and thesis work.</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; font-size:14.5px; color:var(--muted); line-height:1.6;"><span style="width:8px; height:8px; border-radius:50%; background:var(--gold); margin-top:7px; flex-shrink:0;"></span>Fast turnaround without cutting corners on quality.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">What We Offer</span>
+      <h2 class="section-title">Services Designed Around Your Deadline</h2>
+      <p class="section-sub" style="margin-left:auto; margin-right:auto;">From a single photocopy to a fully bound thesis and a designed CV — our catalog covers every stage of a student's or professional's paperwork journey.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 01</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg></div>
+        <h3>Printing &amp; Copying</h3>
+        <div class="tag-row">
+          <span class="tag">Black &amp; White Printing</span>
+          <span class="tag">Photocopy</span>
+          <span class="tag">Scanning</span>
+          <span class="tag">Notes Printing</span>
+          <span class="tag">Assignments</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 02</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/></svg></div>
+        <h3>Binding &amp; Finishing</h3>
+        <div class="tag-row">
+          <span class="tag">Lamination</span>
+          <span class="tag">Spiral Binding</span>
+          <span class="tag">Thesis Binding</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 03</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div>
+        <h3>Typing Services</h3>
+        <div class="tag-row">
+          <span class="tag">English Typing</span>
+          <span class="tag">Urdu Typing</span>
+          <span class="tag">Document Formatting</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 04</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17.5 9.5 9 18l-4 1 1-4 8.5-8.5z"/></svg></div>
+        <h3>Design Studio</h3>
+        <div class="tag-row">
+          <span class="tag">Logo Design</span>
+          <span class="tag">Visiting Card</span>
+          <span class="tag">Certificate Design</span>
+          <span class="tag">ID Card Design</span>
+          <span class="tag">Poster Design</span>
+          <span class="tag">Banner Design</span>
+          <span class="tag">Invitation Card</span>
+          <span class="tag">Flex Design</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 05</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg></div>
+        <h3>Digital &amp; PDF Services</h3>
+        <div class="tag-row">
+          <span class="tag">PDF Editing</span>
+          <span class="tag">PDF Conversion</span>
+          <span class="tag">Email Creation</span>
+          <span class="tag">Internet Services</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 06</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M7 4h10l3 5v11H4V9z"/></svg></div>
+        <h3>Forms &amp; Applications</h3>
+        <div class="tag-row">
+          <span class="tag">Online Admissions</span>
+          <span class="tag">Job Applications</span>
+          <span class="tag">Government Forms</span>
+          <span class="tag">University Forms</span>
+          <span class="tag">CV / Resume</span>
+        </div>
+      </div>
+
+      <div class="catalog-card reveal" style="grid-column:span 1;">
+        <span class="punch"></span>
+        <span class="cat-index">Catalog 07</span>
+        <div class="catalog-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div>
+        <h3>Student Essentials</h3>
+        <div class="tag-row">
+          <span class="tag">Passport Size Photos</span>
+          <span class="tag">School Projects</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-color-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>Please note: Color printing is currently not offered at this location.</div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section why-section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Why H-H</span>
+      <h2 class="section-title">Reasons Our Customers Keep Coming Back</h2>
+    </div>
+    <div class="grid cols-4">
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div><h3>Fast Service</h3><p>Most jobs completed while you wait — no unnecessary delays.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.6-.5z"/></svg></div><h3>Professional Quality</h3><p>Crisp printing and careful finishing on every single order.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Affordable Prices</h3><p>Honest, student-friendly rates with no surprise charges.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5"/></svg></div><h3>Latest Technology</h3><p>Modern printers and scanners for sharp, reliable output.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Friendly Support</h3><p>Patient, courteous staff who take the time to get it right.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/></svg></div><h3>Student Friendly</h3><p>Special care for notes, assignments, thesis and applications.</p></div>
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Trusted Service</h3><p>Years of consistent, dependable work across the community.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK PROCESS ============ -->
+<section class="section process">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="section-title">From Your Hand To Ours In Four Simple Steps</h2>
+      <p class="section-sub">A clear, predictable process so you always know where your document stands.</p>
+    </div>
+    <div class="process-track">
+      <div class="step reveal"><div class="step-num">01</div><h3>Share Your Document</h3><p>Bring it in, WhatsApp it, or email it to our team.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h3>Professional Processing</h3><p>Printed, typed, designed or bound with careful attention.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h3>Quality Check</h3><p>Every page reviewed before it leaves our counter.</p></div>
+      <div class="step reveal"><div class="step-num">04</div><h3>Ready For Collection</h3><p>Pick it up on time, exactly as promised.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">A Glimpse Inside</span>
+      <h2 class="section-title">Our Work, Our Counter</h2>
+      <p class="section-sub" style="margin-left:auto; margin-right:auto;">Photos coming soon — placeholders shown below.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" style="--r:4/5"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg></div><div class="overlay"><span>Printing Counter</span></div></div>
+      <div class="gallery-item reveal" style="--r:1/1"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/></svg></div><div class="overlay"><span>Thesis Binding</span></div></div>
+      <div class="gallery-item reveal" style="--r:5/6"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17.5 9.5 9 18l-4 1 1-4 8.5-8.5z"/></svg></div><div class="overlay"><span>Design Studio</span></div></div>
+      <div class="gallery-item reveal" style="--r:1/1"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/></svg></div><div class="overlay"><span>Passport Photos</span></div></div>
+      <div class="gallery-item reveal" style="--r:4/5"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div><div class="overlay"><span>Typing Desk</span></div></div>
+      <div class="gallery-item reveal" style="--r:5/6"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7 4h10l3 5v11H4V9z"/></svg></div><div class="overlay"><span>Forms &amp; Applications</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE LIST ============ -->
+<section class="section" id="pricing" style="background:var(--soft-gray);">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Price List</span>
+      <h2 class="section-title">Straightforward, Honest Pricing</h2>
+      <p class="section-sub" style="margin-left:auto; margin-right:auto;">Starting rates for our most requested services. Final pricing may vary by paper size, pages and finishing — WhatsApp us for an exact quote.</p>
+    </div>
+
+    <div class="price-tabs">
+      <button class="price-tab active" data-tab="print">Printing &amp; Copy</button>
+      <button class="price-tab" data-tab="bind">Binding</button>
+      <button class="price-tab" data-tab="type">Typing &amp; Forms</button>
+      <button class="price-tab" data-tab="design">Design</button>
+    </div>
+
+    <div class="price-panel active" data-panel="print">
+      <table class="price-table">
+        <tr><td>Black &amp; White Printing (per page)</td><td>Rs. 4</td></tr>
+        <tr><td>Photocopy (per page)</td><td>Rs. 3</td></tr>
+        <tr><td>Scanning (per page)</td><td>Rs. 10</td></tr>
+        <tr><td>Notes Printing (per page)</td><td>Rs. 4</td></tr>
+        <tr><td>Assignment Printing (per page)</td><td>Rs. 4</td></tr>
+        <tr><td>Passport Size Photos (set of 8)</td><td>Rs. 100</td></tr>
+      </table>
+    </div>
+    <div class="price-panel" data-panel="bind">
+      <table class="price-table">
+        <tr><td>Lamination (A4)</td><td>Rs. 40</td></tr>
+        <tr><td>Spiral Binding</td><td>Rs. 60</td></tr>
+        <tr><td>Thesis / Hard Binding</td><td>Rs. 350</td></tr>
+      </table>
+    </div>
+    <div class="price-panel" data-panel="type">
+      <table class="price-table">
+        <tr><td>English Typing (per page)</td><td>Rs. 30</td></tr>
+        <tr><td>Urdu Typing (per page)</td><td>Rs. 40</td></tr>
+        <tr><td>CV / Resume Formatting</td><td>Rs. 250</td></tr>
+        <tr><td>Government / University Form Filling</td><td>Rs. 100</td></tr>
+        <tr><td>Online Admission Assistance</td><td>Rs. 200</td></tr>
+      </table>
+    </div>
+    <div class="price-panel" data-panel="design">
+      <table class="price-table">
+        <tr><td>Logo Design</td><td>Rs. 1,500</td></tr>
+        <tr><td>Visiting Card Design (per side)</td><td>Rs. 300</td></tr>
+        <tr><td>Certificate / ID Card Design</td><td>Rs. 400</td></tr>
+        <tr><td>Poster / Banner Design</td><td>Rs. 500</td></tr>
+        <tr><td>Invitation Card Design</td><td>Rs. 400</td></tr>
+        <tr><td>Flex Design (per sq. ft. printing extra)</td><td>Rs. 600</td></tr>
+      </table>
+    </div>
+
+    <div class="price-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Prices shown are starting rates for reference and may be revised. Please confirm exact pricing with our team before placing bulk orders.</div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Customer Reviews</span>
+      <h2 class="section-title">What People Say About Us</h2>
+    </div>
+    <div class="review-track">
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Got my whole thesis bound the same evening — clean printing, perfect binding, and the staff double-checked every page before handing it over.</p>
+        <div class="reviewer"><div class="av">A</div><div><div class="name">Ayesha K.</div><div class="role">University Student</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Best place near Mathab Chowk for CV design and printing. Affordable, fast, and genuinely friendly service every time I visit.</p>
+        <div class="reviewer"><div class="av">B</div><div><div class="name">Bilal R.</div><div class="role">Job Seeker</div></div></div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="quote">They helped me with my entire university admission form and typing in Urdu — patient, professional, and reasonably priced.</p>
+        <div class="reviewer"><div class="av">S</div><div><div class="name">Sana M.</div><div class="role">Local Resident</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q"><span>What are your working hours?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>We're open every day of the week, Monday through Sunday, from 8 AM to 9 PM — including public holidays.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you offer color printing?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Currently we only offer black &amp; white printing and photocopying. Please contact us directly if you'd like to check for any updates.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Can I send my document over WhatsApp?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Yes — simply send your file to our WhatsApp number and we'll confirm pricing and pickup time before you arrive.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>How long does thesis binding take?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Most thesis and hard-binding orders are completed within a few hours, same day, depending on current volume and page count.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Do you help with government or university forms?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>Yes, our team assists with filling, formatting and printing government forms, university applications and job application documents.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Is there a minimum order for design work?</span><span class="plus"></span></button>
+        <div class="faq-a"><p>No minimum — whether it's a single visiting card or a full banner and flex order, we're happy to help.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div>
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="section-title">Visit Us Or Reach Out Anytime</h2>
+      <p class="section-sub">Walk in, call, or message us on WhatsApp — our team is ready to help with your next document.</p>
+
+      <div class="info-list">
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="lbl">Address</div><div class="val">Mathab Chowk, Mehray Wala</div></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="lbl">Phone</div><a href="tel:+923326162728" class="val" style="display:block;">0332 6162728</a><a href="tel:+923354656732" class="val" style="display:block;">0335 4656732</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></div>
+          <div><div class="lbl">Email</div><a href="mailto:shakirmhussain12@gmail.com" class="val">shakirmhussain12@gmail.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><div class="lbl">Working Hours</div><div class="val">Monday – Sunday, 8 AM – 9 PM</div></div>
+        </div>
+      </div>
+
+      <div class="hero-cta" style="margin-top:36px;">
+        <a href="https://wa.me/923354656732" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">Chat On WhatsApp</a>
+        <a href="tel:+923354656732" class="btn btn-outline btn-lg" style="color:#fff; border-color:rgba(255,255,255,.4);">Call Now</a>
+      </div>
+    </div>
+
+    <div class="map-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <h3 style="color:#fff; font-size:17px; margin-bottom:8px;">Google Map</h3>
+        <p>Map embed will be added here — Mathab Chowk, Mehray Wala.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="H-H Book Center logo">
+          <div><div class="b1">H-H Book Center</div><div class="b2">&amp; Photostate</div></div>
+        </div>
+        <p class="tag">Professional printing, photocopy, binding, typing and design services for students, freelancers and businesses — under one roof, every single day.</p>
+        <div class="social-row">
+          <a href="https://wa.me/923354656732" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.86L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg></a>
+          <a href="mailto:shakirmhussain12@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg></a>
+          <a href="tel:+923354656732" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Printing &amp; Copying</a></li>
+          <li><a href="#services">Binding &amp; Finishing</a></li>
+          <li><a href="#services">Typing Services</a></li>
+          <li><a href="#services">Design Studio</a></li>
+          <li><a href="#services">Forms &amp; Applications</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Mathab Chowk, Mehray Wala</li>
+          <li><a href="tel:+923354656732">0335 4656732</a></li>
+          <li><a href="tel:+923326162728">0332 6162728</a></li>
+          <li><a href="mailto:shakirmhussain12@gmail.com">shakirmhussain12@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 H-H Book Center &amp; Photostate. All Rights Reserved.</span>
+      <span>Designed with care for our community.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<div class="floating">
+  <button id="toTop" aria-label="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a href="tel:+923354656732" class="fab fab-call" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  <a href="https://wa.me/923354656732" target="_blank" rel="noopener" class="fab fab-wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.86L2.05 22l5.36-1.4a9.9 9.9 0 0 0 4.63 1.18h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.26-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.21-8.25 8.21zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg></a>
+</div>
+
+<script>
+// Loader
+window.addEventListener('load', () => {
+  setTimeout(()=>{ document.getElementById('loader').classList.add('hide'); }, 400);
+});
+
+// Scroll progress + header state + to-top
+const header = document.getElementById('siteHeader');
+const progress = document.getElementById('progress');
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrolled = h.scrollTop;
+  const height = h.scrollHeight - h.clientHeight;
+  progress.style.width = (scrolled / height * 100) + '%';
+  header.classList.toggle('scrolled', scrolled > 30);
+  toTop.classList.toggle('show', scrolled > 500);
+});
+toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  mainNav.classList.toggle('open');
+});
+mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  menuToggle.classList.remove('open'); mainNav.classList.remove('open');
+}));
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.15});
+revealEls.forEach(el => io.observe(el));
+
+// Counter animation
+const counters = document.querySelectorAll('.stat .num');
+const counterIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const el = e.target;
+      const target = +el.dataset.count;
+      const span = el.querySelector('span');
+      let cur = 0;
+      const dur = 1600;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min((now-start)/dur, 1);
+        const eased = 1 - Math.pow(1-p, 3);
+        cur = Math.floor(eased * target);
+        span.textContent = cur.toLocaleString();
+        if(p < 1) requestAnimationFrame(tick);
+        else span.textContent = target.toLocaleString();
+      }
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    }
+  });
+}, {threshold:.5});
+counters.forEach(c => counterIO.observe(c));
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  if(item.classList.contains('open')) a.style.maxHeight = a.scrollHeight + 'px';
+  q.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(other => {
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+// Price tabs
+document.querySelectorAll('.price-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.price-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelector(`.price-panel[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
