@@ -13,7 +13,7 @@
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="H-H Book Center & Photostate | Professional Printing & Student Services">
 <meta property="og:description" content="Fast, reliable and affordable printing, photocopy, stationery and digital services under one roof.">
-<meta property="og:image" content="assets/logo.png">
+<meta property="og:image" content="logo.png">
 <meta property="og:locale" content="en_PK">
 
 <!-- Structured Data -->
@@ -22,7 +22,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "H-H Book Center & Photostate",
-  "image": "assets/logo.png",
+  "image": "logo.png",
   "telephone": ["+923354656732", "+923326162728"],
   "email": "shakirmhussain12@gmail.com",
   "address": {
@@ -30,13 +30,13 @@
     "streetAddress": "Mathab Chowk, Mehray Wala",
     "addressCountry": "PK"
   },
-  "openingHours": "Mo-Su 08:00-21:00",
-  "priceRange": "$"
+  "openingHours": ["Mo-Sa 08:00-13:30", "Mo-Sa 16:30-20:00", "Su 08:00-20:00"],
+  "priceRange": "Rs"
 }
 </script>
 
-<link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="apple-touch-icon" href="assets/logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,6 +248,10 @@ nav.main-nav a:hover::after{width:100%;}
 @media(max-width:980px){.cols-3,.cols-4{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:620px){.cols-3,.cols-4{grid-template-columns:1fr;}}
 
+.about-grid{grid-template-columns:1fr 1fr; gap:64px; align-items:center;}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr; gap:40px;}}
+@media(max-width:420px){.doc-stack{transform:scale(.82);} .seal-badge{right:-10px;}}
+
 /* Service catalog cards */
 .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
 @media(max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
@@ -412,6 +416,13 @@ nav.main-nav a:hover::after{width:100%;}
 .map-wrap{border-radius:var(--radius-lg); overflow:hidden; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.03); min-height:420px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:14px; text-align:center; padding:40px;}
 .map-wrap svg{width:44px; height:44px; stroke:var(--gold-light);}
 .map-wrap p{color:rgba(255,255,255,.5); font-size:14px; max-width:280px;}
+.map-card{display:flex; flex-direction:column; gap:14px;}
+.map-card iframe{width:100%; height:420px; border:0; border-radius:var(--radius-lg); background:rgba(255,255,255,.05);}
+.map-card .btn{align-self:flex-start;}
+#setupPanel{position:fixed; left:12px; right:12px; bottom:12px; z-index:10001; max-width:460px; background:#fff; color:var(--ink); border-radius:16px; padding:18px; box-shadow:var(--shadow-lg); border:2px solid var(--gold); font-size:14px; line-height:1.55;}
+#setupPanel h4{font-size:16px; margin-bottom:6px;}
+#setupPanel textarea{width:100%; margin-top:10px; padding:8px; font-family:monospace; font-size:13px; border:1px solid var(--line); border-radius:8px;}
+#setupPanel .btn{margin-top:10px; margin-right:8px; padding:10px 18px;}
 @media(max-width:900px){.contact-section .container{grid-template-columns:1fr;}}
 
 /* ============ FOOTER ============ */
@@ -476,7 +487,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
 <header id="siteHeader">
   <div class="container nav-wrap">
     <a href="#home" class="brand">
-      <img src="assets/logo.png" alt="H-H Book Center & Photostate logo">
+      <img src="logo.png" alt="H-H Book Center & Photostate logo">
       <div class="brand-text">
         <div class="b1">H-H Book Center</div>
         <div class="b2">&amp; Photostate</div>
@@ -546,7 +557,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
 <!-- ============ ABOUT ============ -->
 <section class="section" id="about" style="background:var(--soft-gray);">
   <div class="container">
-    <div class="grid" style="grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+    <div class="grid about-grid">
       <div class="reveal">
         <span class="eyebrow">About Us</span>
         <h2 class="section-title">A Full-Service Print &amp; Student Hub, Built On Trust</h2>
@@ -561,8 +572,8 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
             <div style="font-size:13px; color:var(--muted); margin-top:4px;">Services under one roof</div>
           </div>
           <div>
-            <div style="font-family:'Fraunces',serif; font-size:30px; color:var(--royal);">7AM–9PM</div>
-            <div style="font-size:13px; color:var(--muted); margin-top:4px;">Open every single day</div>
+            <div style="font-family:'Fraunces',serif; font-size:30px; color:var(--royal);">8AM–8PM</div>
+            <div style="font-size:13px; color:var(--muted); margin-top:4px;">Open 7 days a week</div>
           </div>
         </div>
       </div>
@@ -764,10 +775,15 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
 
     <div class="price-panel active" data-panel="print">
       <table class="price-table">
-        <tr><td>Black &amp; White Printing (per page)</td><td>Rs. 4</td></tr>
-        <tr><td>Photocopy (per page)</td><td>Rs. 3</td></tr>
+        <tr><td>Black &amp; White Printing (per page)</td><td>Rs. 30</td></tr>
+        <tr><td>Photocopy (per page)</td><td>Rs. 10</td></tr>
+        <tr><td>Photocopy for Schools (per page)</td><td>Rs. 7</td></tr>
+        <tr><td>Printing for Schools (per page)</td><td>Rs. 10</td></tr>
+        <tr><td>Printing / Photocopy for Academies (per page)</td><td>Rs. 8</td></tr>
+        <tr><td>Copy &amp; Print (per page)</td><td>Rs. 10</td></tr>
         <tr><td>Scanning (per page)</td><td>Rs. 10</td></tr>
-        <tr><td>Notes Printing (per page)</td><td>Rs. 4</td></tr>
+        <tr><td>Notes Printing – single side (per page)</td><td>Rs. 15</td></tr>
+        <tr><td>Notes Printing – double side (per page)</td><td>Rs. 20</td></tr>
         <tr><td>Assignment Printing (per page)</td><td>Rs. 4</td></tr>
         <tr><td>Passport Size Photos (set of 8)</td><td>Rs. 100</td></tr>
       </table>
@@ -841,7 +857,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
     <div class="faq-list">
       <div class="faq-item open">
         <button class="faq-q"><span>What are your working hours?</span><span class="plus"></span></button>
-        <div class="faq-a"><p>We're open every day of the week, Monday through Sunday, from 8 AM to 9 PM — including public holidays.</p></div>
+        <div class="faq-a"><p>Monday to Saturday we're open 8 AM – 1:30 PM, then again 4:30 PM – 8 PM (academic timings). On Sunday we're open non-stop from 8 AM to 8 PM.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q"><span>Do you offer color printing?</span><span class="plus"></span></button>
@@ -890,7 +906,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
         </div>
         <div class="info-row">
           <div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-          <div><div class="lbl">Working Hours</div><div class="val">Monday – Sunday, 8 AM – 9 PM</div></div>
+          <div><div class="lbl">Working Hours</div><div class="val">Mon – Sat: 8 AM – 1:30 PM &amp; 4:30 PM – 8 PM</div><div class="val" style="margin-top:4px;">Sunday: 8 AM – 8 PM (non-stop)</div></div>
         </div>
       </div>
 
@@ -900,12 +916,9 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
       </div>
     </div>
 
-    <div class="map-wrap">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <div>
-        <h3 style="color:#fff; font-size:17px; margin-bottom:8px;">Google Map</h3>
-        <p>Map embed will be added here — Mathab Chowk, Mehray Wala.</p>
-      </div>
+    <div class="map-card">
+      <iframe id="shopMap" title="H-H Book Center location on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <a id="dirBtn" class="btn btn-gold" target="_blank" rel="noopener">Get Directions</a>
     </div>
   </div>
 </section>
@@ -916,7 +929,7 @@ a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-off
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="H-H Book Center logo">
+          <img src="logo.png" alt="H-H Book Center logo">
           <div><div class="b1">H-H Book Center</div><div class="b2">&amp; Photostate</div></div>
         </div>
         <p class="tag">Professional printing, photocopy, binding, typing and design services for students, freelancers and businesses — under one roof, every single day.</p>
@@ -1061,6 +1074,66 @@ document.querySelectorAll('.price-tab').forEach(tab => {
     document.querySelector(`.price-panel[data-panel="${tab.dataset.tab}"]`).classList.add('active');
   });
 });
+
+// FAQ: open item ki height fonts load hone ke baad dobara set karo (text cut hone ka bug)
+function fixFaqHeight(){
+  const o=document.querySelector('.faq-item.open .faq-a');
+  if(o) o.style.maxHeight=o.scrollHeight+'px';
+}
+window.addEventListener('load',fixFaqHeight);
+window.addEventListener('resize',fixFaqHeight);
+
+// Loader: agar 'load' event slow ho (slow net / fonts) to bhi 3s baad hat jaye
+setTimeout(()=>{ const l=document.getElementById('loader'); if(l) l.classList.add('hide'); }, 3000);
+
+// ============ SHOP LOCATION ============
+// Ek baar setup ke baad yahan coordinates paste kar dein (setup ka tareeqa: site kholein ?setup laga kar)
+const SHOP = { lat: null, lng: null };
+
+(function initMap(){
+  let c = SHOP;
+  if(c.lat == null){
+    try{ const saved = JSON.parse(localStorage.getItem('hh_shop')||'null'); if(saved) c = saved; }catch(e){}
+  }
+  const iframe = document.getElementById('shopMap');
+  const dir = document.getElementById('dirBtn');
+  if(c.lat != null){
+    const ll = c.lat + ',' + c.lng;
+    iframe.src = 'https://maps.google.com/maps?q=' + ll + '&z=17&output=embed';
+    dir.href = 'https://www.google.com/maps/dir/?api=1&destination=' + ll;
+  } else {
+    const q = encodeURIComponent('H-H Book Center & Photostate, Mathab Chowk, Mehray Wala');
+    iframe.src = 'https://maps.google.com/maps?q=' + q + '&z=16&output=embed';
+    dir.href = 'https://www.google.com/maps/search/?api=1&query=' + q;
+  }
+})();
+
+// Setup mode: sirf jab URL ke end mein ?setup ho (customers ko nazar nahi aata)
+if(new URLSearchParams(location.search).has('setup')){
+  const box = document.createElement('div');
+  box.id = 'setupPanel';
+  box.innerHTML = '<h4>Shop Location Setup</h4><div id="setupMsg">Dukaan par khade ho kar neeche button dabayein aur location allow karein.</div>' +
+    '<button class="btn btn-gold" id="getLoc">Meri location lagao</button>' +
+    '<button class="btn btn-outline" id="clearLoc">Reset</button>';
+  document.body.appendChild(box);
+  document.getElementById('getLoc').onclick = () => {
+    const msg = document.getElementById('setupMsg');
+    if(!navigator.geolocation){ msg.textContent = 'Is browser mein location support nahi.'; return; }
+    msg.textContent = 'Location dhoond raha hoon...';
+    navigator.geolocation.getCurrentPosition(pos => {
+      const lat = +pos.coords.latitude.toFixed(6), lng = +pos.coords.longitude.toFixed(6);
+      try{ localStorage.setItem('hh_shop', JSON.stringify({lat,lng})); }catch(e){}
+      msg.innerHTML = 'Mil gayi! Accuracy: ~' + Math.round(pos.coords.accuracy) + ' m. Is phone par map update ho gaya.<br>' +
+        'Sab visitors ko dikhane ke liye ye line code mein paste karein (ya mujhe bhej dein):' +
+        '<textarea readonly rows="2" onclick="this.select()">const SHOP = { lat: ' + lat + ', lng: ' + lng + ' };</textarea>';
+      document.getElementById('shopMap').src = 'https://maps.google.com/maps?q=' + lat + ',' + lng + '&z=17&output=embed';
+      document.getElementById('dirBtn').href = 'https://www.google.com/maps/dir/?api=1&destination=' + lat + ',' + lng;
+    }, err => {
+      msg.textContent = 'Location nahi mili (' + err.message + '). Phone ki Location/GPS on karein aur browser mein allow karein.';
+    }, {enableHighAccuracy:true, timeout:20000});
+  };
+  document.getElementById('clearLoc').onclick = () => { try{localStorage.removeItem('hh_shop');}catch(e){} location.reload(); };
+}
 </script>
 </body>
 </html>
